@@ -75,11 +75,11 @@ public class Order {
         StringBuilder sb = new StringBuilder();
         double sum = 0;
         sb.append("ORDER SUMMARY: ").append("\n");
-        sb.append("Order moment: ").append((moment)).append("\n");
+        sb.append("Order moment: ").append(sdf.format(moment)).append("\n");
         sb.append("Order status: ").append(status).append("\n");
         sb.append("Cliente: ");
         sb.append(client.getName());
-        sb.append(" (").append(client.getBirthDate()).append(")");
+        sb.append(" (").append(sdf.format(client.getBirthDate())).append(")");
         sb.append(" - ");
         sb.append(client.getEmail()).append("\n");
         sb.append("Order itens: ").append("\n");

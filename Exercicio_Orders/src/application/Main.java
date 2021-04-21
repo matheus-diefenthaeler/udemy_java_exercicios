@@ -23,7 +23,7 @@ public class Main {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 //        Date moment = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse(string);
 
-        Date moment = sdf.parse(LocalDateTime.now().toString().replace("-","/"));
+//        Date moment = sdf.parse(LocalDateTime.now().toString().replace("-","/"));
 
         System.out.println("Enter cliente data:");
         System.out.print("Name: ");
@@ -37,7 +37,7 @@ public class Main {
         System.out.print("Status: ");
         String status = sc.next();
 
-        Order order = new Order(moment, OrderStatus.valueOf(status), new Client(name, email, birthDate));
+        Order order = new Order(new Date(), OrderStatus.valueOf(status), new Client(name, email, birthDate));
 
         System.out.print("How many itens to this order? ");
         int itens = sc.nextInt();
